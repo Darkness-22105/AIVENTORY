@@ -1,0 +1,170 @@
+/* --- Blue Theme & Layered Effects --- */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #181a1b;
+    color: #e0e0e0;
+}
+h1 {
+    background: #23272b;
+    color: #fff;
+    margin: 0;
+    padding: 1rem;
+    border-bottom: 4px solid #1976d2;
+    box-shadow: 0 2px 12px 0 #185a9d33;
+}
+nav {
+    background: #23272b;
+    padding: 0.5rem 1rem;
+    border-bottom: 2px solid #185a9d;
+    box-shadow: 0 2px 8px #185a9d22;
+}
+nav a {
+    color: #e0e0e0;
+    margin-right: 1rem;
+    text-decoration: none;
+}
+nav a:hover {
+    text-decoration: underline;
+    color: #64b5f6;
+}
+div {
+    padding: 2rem;
+    background: #222426;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #1976d233, 0 0 0 4px #185a9d11;
+}
+input, select, textarea {
+    background: #23272b;
+    color: #e0e0e0;
+    border: 1px solid #1976d2;
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+button, .btn {
+    background: linear-gradient(90deg, #1976d2 0%, #64b5f6 100%);
+    color: #fff;
+    border: none;
+    border-radius: 999px;
+    font-size: 1.08rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.25s, color 0.2s, box-shadow 0.25s, transform 0.18s;
+    box-shadow: 0 2px 8px #1976d233;
+    letter-spacing: 0.5px;
+    padding: 14px 32px;
+}
+button:hover, .btn:hover, .btn:focus {
+    background: linear-gradient(90deg, #64b5f6 0%, #1976d2 100%);
+    color: #fff;
+    filter: brightness(1.08);
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 0 12px 2px #64b5f6, 0 4px 24px #1976d244;
+    outline: none;
+}
+.btn-primary {
+    background: linear-gradient(90deg, #1976d2 0%, #2196f3 100%);
+    color: #fff;
+    box-shadow: 0 4px 16px #1976d233;
+}
+.btn-primary:hover, .btn-primary:focus {
+    background: linear-gradient(90deg, #2196f3 0%, #1976d2 100%);
+    color: #fff;
+    box-shadow: 0 0 16px 4px #2196f3, 0 4px 24px #1976d244;
+}
+.btn-success {
+    background: linear-gradient(90deg, #43cea2 0%, #1976d2 100%);
+    color: #fff;
+    box-shadow: 0 4px 16px #43cea233;
+}
+.btn-success:hover, .btn-success:focus {
+    background: linear-gradient(90deg, #1976d2 0%, #43cea2 100%);
+    color: #fff;
+    box-shadow: 0 0 16px 4px #43cea2, 0 4px 24px #43cea244;
+}
+.btn-danger {
+    background: linear-gradient(90deg, #ff6b6b 0%, #1976d2 100%);
+    color: #fff;
+    box-shadow: 0 4px 16px #ff6b6b33;
+}
+.btn-danger:hover, .btn-danger:focus {
+    background: linear-gradient(90deg, #1976d2 0%, #ff6b6b 100%);
+    color: #fff;
+    box-shadow: 0 0 16px 4px #ff6b6b, 0 4px 24px #ff6b6b44;
+}
+.btn:active {
+    transform: scale(0.98);
+    box-shadow: 0 1px 4px #1976d222;
+}
+/* --- Layered Containers --- */
+.hero {
+    background: #23272b;
+    border-radius: 32px;
+    margin: 40px auto 24px auto;
+    max-width: 900px;
+    padding: 48px 32px 32px 32px;
+    box-shadow: 0 8px 32px #1976d233, 0 0 0 8px #64b5f622;
+    border: 2.5px solid #1976d2;
+}
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 16px 48px 16px;
+    box-shadow: 0 4px 24px #185a9d22, 0 0 0 6px #64b5f611;
+    border-radius: 24px;
+    border: 2px solid #185a9d;
+}
+.content {
+    background: #23272b;
+    border-radius: 24px;
+    box-shadow: 0 8px 32px #1976d233, 0 0 0 4px #64b5f622;
+    padding: 40px 32px 32px 32px;
+    margin-top: 24px;
+    min-height: 500px;
+    border: 2px solid #64b5f6;
+}
+.stat-card {
+    background: linear-gradient(135deg, #23272b 60%, #185a9d 100%);
+    color: #64b5f6;
+    padding: 32px 24px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 4px 24px #1976d233, 0 0 0 4px #64b5f622;
+    border: 2px solid #1976d2;
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+    overflow: hidden;
+    font-size: 1.1rem;
+}
+.stat-card:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 12px 36px #64b5f644, 0 0 0 8px #1976d222;
+}
+.modal-content {
+    background: #23272b;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 20px 40px #1976d233, 0 0 0 6px #64b5f622;
+    border: 2px solid #1976d2;
+}
+.bill-item, .inventory-item {
+    background: #23272b;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-left: 6px solid #1976d2;
+    box-shadow: 0 2px 8px #1976d233, 0 0 0 4px #64b5f611;
+}
+.alert {
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border-left: 6px solid #64b5f6;
+    background: #23272b;
+    color: #64b5f6;
+    box-shadow: 0 2px 8px #1976d233, 0 0 0 4px #64b5f611;
+} 

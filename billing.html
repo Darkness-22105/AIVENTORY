@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing System</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Billing System</h1>
+    <nav>
+        <a href="/">Home</a> |
+        <a href="/products">Products</a> |
+        <a href="/inventory">Inventory</a>
+    </nav>
+    <div>
+        <h2>Generate Bill</h2>
+        <form method="POST">
+            <label>Select Product:</label>
+            <select name="product_id">
+                {% for product in products %}
+                    <option value="{{ product._id }}">{{ product.name }} - ₹{{ product.price }}</option>
+                {% endfor %}
+            </select><br>
+        
+            <label>Quantity:</label>
+            <input type="number" name="quantity" required><br>
+        
+            <button type="submit">Generate Bill</button>
+        </form>
+        
+        {% if bill %}
+            <h3>Bill Summary</h3>
+            <p>Product: {{ bill.product }}</p>
+            <p>Quantity: {{ bill.quantity }}</p>
+            <p>Total: ₹{{ bill.total }}</p>
+        {% endif %}
+        <form method="POST" action="/update_inventory/{{ product._id }}">
+            <label>Select Product:</label>
+            <select name="product_id">
+                {% for product in products %}
+                    <option value="{{ product._id }}">{{ product.name }} (Stock: {{ product.stock }})</option>
+                {% endfor %}
+            </select><br>
+        </form>
+    </div>
+</body>
+</html> 

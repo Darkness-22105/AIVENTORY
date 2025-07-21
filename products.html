@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Management</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Product Management</h1>
+    <nav>
+        <a href="/">Home</a> |
+        <a href="/inventory">Inventory</a> |
+        <a href="/billing">Billing</a>
+    </nav>
+    <div>
+        <form method="POST" action="/update_product/{{ product._id }}">
+            <input type="text" name="name" value="{{ product.name }}">
+            <input type="text" name="category" value="{{ product.category }}">
+            <input type="number" name="price" value="{{ product.price }}">
+            <button type="submit">Update Product</button>
+          </form>
+    </div>
+</body>
+</html> 
